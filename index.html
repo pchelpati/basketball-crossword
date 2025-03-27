@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Basketball Trivia Crossword</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Basketball Trivia Crossword - International School of Milan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon to make it look more professional -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏀</text></svg>">
 </head>
-  
 <body>
-    <header>
-      <img src="ism-logo.png" alt="ISM Logo">
-      <h1>Basketball Trivia Crossword</h1>
-    </header>
-  
-    <div id="crossword-container"></div>
-  
-    <div id="clues">
-      <div>
-        <h2>Across</h2>
-        <ul id="across-clues"></ul>
-      </div>
-      <div>
-        <h2>Down</h2>
-        <ul id="down-clues"></ul>
-      </div>
+    <div class="container">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="milan-logo.png" alt="International School of Milan Logo" class="school-logo">
+                <h1>Basketball Trivia Crossword </h1>
+            </div>
+        </div>
+        
+        <div class="device-message">
+            <p class="mobile-message">For best experience on small screens, use landscape orientation.</p>
+        </div>
+        
+        <div class="game-area">
+            <div class="grid-container" id="crossword-grid">
+                <!-- Grid will be generated via JavaScript -->
+            </div>
+            
+            <div class="clues-container">
+                <div class="clues-section">
+                    <h2>Across</h2>
+                    <ol class="clue-list">
+                        <li>Basketball players shoot into this</li>
+                        <li>A basketball pass that leads to a slam dunk</li>
+                        <li>NBA legend Chamberlain's first name</li>
+                        <li>Lakers legend Bryant's first name</li>
+                        <li>When a player tries to score a basket</li>
+                    </ol>
+                </div>
+                
+                <div class="clues-section">
+                    <h2>Down</h2>
+                    <ol class="clue-list">
+                        <li>Atlanta's NBA team</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timer-container">
+            <div class="timer">
+                <span>Time: </span>
+                <span id="timer-display">00:00</span>
+            </div>
+            <div class="best-time">
+                <span>Best Time: </span>
+                <span id="best-time-display">--:--</span>
+            </div>
+        </div>
+        
+        <div class="feedback" id="feedback-message"></div>
+        
+        <div class="button-container">
+            <button id="check-btn">Check Answers</button>
+            <button id="reset-btn">Reset</button>
+            <button id="show-answers-btn">Show Answers</button>
+        </div>
+        
+        <div class="footer">
+            &copy; 2025 International School of Milan - Educational Resource
+        </div>
     </div>
-  
-    <button onclick="checkAnswers()">Check Answers</button>
-  
+    
     <script src="script.js"></script>
-  </body>  
+</body>
 </html>
